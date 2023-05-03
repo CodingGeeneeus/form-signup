@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Page</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" ></script>
   </head>
   <body>
     <!--SideBar-->
@@ -36,27 +37,80 @@
         <h1>Curtis Form</h1>
       </div>
 
-      <p>Photo by <a href="https://unsplash.com/@mroz">Filip Mroz</a> From <a href="https://unsplash.com/">Unsplash</a></p>
-    
+      <p>
+        Photo by <a href="https://unsplash.com/@mroz">Filip Mroz</a> From
+        <a href="https://unsplash.com/">Unsplash</a>
+      </p>
     </div>
     <!--SideBar-->
 
     <div id="main">
-        <div class="description-container">
-            <div class="description-content">
-                <p>This is a simple example of a sign up form created with only HTML and CSS.  It is not functional and the links and buttons don't lead anywhere.</p>
-            </div>
+      <div class="description-container">
+        <div class="description-content">
+          <p>
+            This is a simple example of a sign up form created with only HTML
+            and CSS. It is not functional and the links and buttons don't lead
+            anywhere.
+          </p>
         </div>
-        
-        <div id="form-container">
-            <form action="post">
-            </form>
-        </div>
+      </div>
 
-        <div class ='footer'>
-            <p>Created by: <a href="https://github.com/CodingGeeneeus">Curtis O'Donnell</a></p>
-        </div>
+      <div id="form-container">
+        <form action="post">
+          
+          <div class="input-grid">
+            <label for="username">First Name:
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+              />
+            </label>
+
+            <label for="lastname"
+              >Last Name:
+              <input type="text" name="lastname" id="lastname" required />
+            </label>
+
+            <label for="usermail"
+              >Email:
+              <input type="email" name="usermail" id="usermail" />
+            </label>
+            
+            <label for="userphone"
+              >Phone:
+              <input type="tel" name="userphone" id="userphone" />
+            </label>
+
+            <label for="userpass"
+              >Password:
+              <input type="password" name="userpass" id="userpass" required />
+            </label>
+
+
+            <label for="confirmPassword"
+              >Confirm Password:
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                required
+                onkeyup="validatePassword()"
+              />
+            </label>
+          </div>
+
+          <button>Confirm</button>
+        </form>
+      </div>
+
+      <div class="footer">
+        <p>
+          Created by:
+          <a href="https://github.com/CodingGeeneeus">Curtis O'Donnell</a>
+        </p>
+      </div>
     </div>
-    
   </body>
 </html>
